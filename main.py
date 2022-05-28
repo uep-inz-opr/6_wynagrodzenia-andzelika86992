@@ -42,4 +42,4 @@ for pracownik in pracownicy:
     print("{} {} {} {}".format(pracownik.imie, pracownik.wynagrodzenie_netto(), pracownik.skladki_pracodawcy(), pracownik.laczny_koszt_na_pracownika()))
     laczny_koszt_na_wszytkich_pracownikow += pracownik.laczny_koszt_na_pracownika()
 
-print(round(laczny_koszt_na_wszytkich_pracownikow,2))
+print(f"{laczny_koszt_na_wszytkich_pracownikow}")
