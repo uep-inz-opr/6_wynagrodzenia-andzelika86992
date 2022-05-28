@@ -16,7 +16,7 @@ class Pracownik:
         koszt_uzyskania_przychodu = 111.25
         podstawa_obliczenia_zaliczki_na_podtek_dochodowy = round(self.wynagrodzenie_brutto - koszt_uzyskania_przychodu - self.ubezpieczenie_spoleczne())
         zaliczka_na_podatek_dochodowy_przed_obliczeniem_skladki_zdrowotnej = (podstawa_obliczenia_zaliczki_na_podtek_dochodowy * 0.18) - 46.33
-        zaliczka_na_podatek_dochodowy_do_pobrania = round(zaliczka_na_podatek_dochodowy_przed_obliczeniem_skladki_zdrowotnej - skladka_ubez_zdrowotne_odliczana_od_podatku)
+)        zaliczka_na_podatek_dochodowy_do_pobrania = round(zaliczka_na_podatek_dochodowy_przed_obliczeniem_skladki_zdrowotnej - skladka_ubez_zdrowotne_odliczana_od_podatku)
         return round(self.wynagrodzenie_brutto - self.ubezpieczenie_spoleczne() - ubezpiecznie_zdrowotne - zaliczka_na_podatek_dochodowy_do_pobrania,2)
 
     def skladki_pracodawcy(self)->float:
@@ -42,4 +42,4 @@ for pracownik in pracownicy:
     print("{} {} {} {}".format(pracownik.imie, pracownik.wynagrodzenie_netto(), pracownik.skladki_pracodawcy(), pracownik.laczny_koszt_na_pracownika()))
     laczny_koszt_na_wszytkich_pracownikow += pracownik.laczny_koszt_na_pracownika()
 
-print(laczny_koszt_na_wszytkich_pracownikow)
+print(round(laczny_koszt_na_wszytkich_pracownikow,2))
