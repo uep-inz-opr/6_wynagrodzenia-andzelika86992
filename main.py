@@ -39,7 +39,7 @@ for i in range(0, 2):
 
 laczny_koszt_na_wszytkich_pracownikow = 0
 for pracownik in pracownicy:
-    print("{} {} {} {}".format(pracownik.imie, pracownik.wynagrodzenie_netto(), pracownik.skladki_pracodawcy(), pracownik.laczny_koszt_na_pracownika()))
+    print((f"{pracownik.imie}, {pracownik.wynagrodzenie_netto():.2f}, {pracownik.skladki_pracodawcy():.2f}, {pracownik.laczny_koszt_na_pracownika():.2f}"))
     laczny_koszt_na_wszytkich_pracownikow += pracownik.laczny_koszt_na_pracownika()
 
 print(f"{laczny_koszt_na_wszytkich_pracownikow}")
