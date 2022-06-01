@@ -37,8 +37,9 @@ for i in range(0, 2):
     dane = input("".format(i + 1)).split(" ")
     pracownicy.append(Pracownik(dane[0], dane[1]))
 
-laczny_koszt_na_wszytkich_pracownikow = 0
+laczny_koszt_na_wszystkich_pracownikow = 0
 for pracownik in pracownicy:
     print((f"{pracownik.imie} {pracownik.wynagrodzenie_netto():.2f} {pracownik.skladki_pracodawcy():.2f} {pracownik.laczny_koszt_na_pracownika():.2f}"))
-    laczny_koszt_na_wszytkich_pracownikow += pracownik.laczny_koszt_na_pracownika()
-print(f"(laczny_koszt_na_wszystkich_pracownikow:.2f)")
+    laczny_koszt_na_wszystkich_pracownikow += pracownik.laczny_koszt_na_pracownika()
+
+print(round(laczny_koszt_na_wszystkich_pracownikow,2))
