@@ -30,10 +30,9 @@ class Pracownik:
     def laczny_koszt_na_pracownika(self)->float:
         return round(self.wynagrodzenie_brutto + self.skladki_pracodawcy(),2)
 
-ilosc = int(input(""))
-
 pracownicy = []
-for i in range(0, 2):
+ilosc = int(input(""))
+for i in range(ilosc):
     dane = input("".format(i + 1)).split(" ")
     pracownicy.append(Pracownik(dane[0], dane[1]))
 
